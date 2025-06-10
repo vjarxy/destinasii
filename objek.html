@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinasi Jawa Timur</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/fav.png" type="image/x-icon">
+</head>
+<body>
+    <!-- home -->
+    <section class="home" id="home">
+        <div class="home-box">
+            <nav id="navbar">
+                <div class="logo bars">
+                    <div class="bar">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                    <h3><img src="img/logo.png" alt=""></h3>
+                </div>
+                <div class="menu">
+                    <div class="close">
+                        <i class="fa fa-close"></i>
+                    </div>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#objek">Objek Wisata</a></li>
+                        <li><a href="index.html#kuliner">Kuliner</a></li>
+                        <li><a href="index.html#kesenian">Kesenian</a></li>
+                        <li><a href="index.html#artikel">Artikel</a></li>
+                    </ul>
+                </div>
+                <div class="signup-login">
+                    <button class="dark-mode"><i class="fa fa-sun-o" aria-hidden="true"></i>
+                </div>
+            </nav>
+
+            <div class="content">
+                <h5>Selamat Datang di</h5>
+                <h1>Galeri Destinasi Jawa Timur</h1>
+                <p>Terdapat beberapa macam objek wisata, kuliner dan kesenian yang ada di jawa timur</p>
+            </div>
+        </div>
+    </section>
+    <!-- home end -->
+
+    <!-- objek wisata -->
+    <section class="objek" id="objek">
+        <h4 class="label">Kuliner</h4>
+        <div class="container">
+            <div class="container-box">
+                <h2 class="heading">Beberapa Foto Objek Wisata yang ada di Jawa Timur</h2>
+                <div class="content">
+                    <p>Objek wisata adalah tempat atau area yang menarik untuk dikunjungi, seperti taman, museum, atau tempat bersejarah, yang memberikan pengalaman dan hiburan kepada pengunjung.</p>
+                    <a href="index.html#objek"><i class="fa fa-arrow-left"></i> Kembali</a>
+                </div>
+            </div>
+            <div class="galeri-slide">
+                <div class="slide" style="background-image: url('img/bromo.png');">
+                    <h3>Gunung Bromo</h3>
+                </div>
+                <div class="slide" style="background-image: url('img/kawah.jpg');">
+                    <h3>Kawah Ijen</h3>
+                </div>
+                <div class="slide" style="background-image: url('img/baluran.png');">
+                    <h3>Taman Nasional Baluran</h3>
+                </div>
+                <div class="slide" style="background-image: url('img/pantai\ klayar.jpg');">
+                    <h3>Pantai Klayar</h3>
+                </div>
+                <div class="slide" style="background-image: url('img/papuma.jpg');">
+                    <h3>Pantai Papuma</h3>
+                </div>
+                <div class="slide" style="background-image: url('img/paralayang.jpg');">
+                    <h3>Paralayang Batu Malang</h3>
+                </div>
+                <div class="slide" style="background-image: url('img/madakaripura.jpg');">
+                    <h3>Air Terjun Madakaripura</h3>
+                </div>
+                <div class="slide" style="background-image: url('img/ciblungan.jpg');">
+                    <h3>Air Terjun Ciblungan</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        activeslideimg();
+        function activeslideimg(activeSlide = 2) {
+            const slides = document.querySelectorAll(".slide");
+            slides[activeSlide].classList.add("active");
+            for (const slide of slides) {
+                slide.addEventListener("click", () => {
+                    clearActiveClasses();
+                    slide.classList.add("active");
+                });
+            }
+            function clearActiveClasses() {
+                slides.forEach((slide) => {
+                    slide.classList.remove("active");
+                })
+            }
+        }
+    </script>
+    <!-- objek wisata end -->
+
+    <!-- footer -->
+    <footer>
+        <section class="footer">
+            <div class="container">
+                <div class="detail">
+                    <h3><img src="img/logo.png" alt=""></h3>
+                    <p>Website destinasi Jawa Timur menyajikan informasi lengkap tentang wisata, budaya, kuliner, dan kegiatan menarik di provinsi ini, membantu pengunjung merencanakan perjalanan mereka.</p>
+                    <h5>kirim pesan</h5>
+                    <div class="pesan">
+                        <input type="text" class="search-input" placeholder="Pesan..">
+                        <button class="search-button">Kirim</button>
+                    </div>
+                    <a href="#">nvl75521@gmail.com</a>
+                    <div class="social">
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-facebook-square"></i></a>
+                        <a href="#"><i class="fa fa-twitter-square"></i></a>
+                    </div>
+                </div>
+                <div class="about-us">
+                    <h4>Explore More</h4>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">destinasi</a></li>
+                    <li><a href="#">kuliner</a></li>
+                    <li><a href="#">kesenian dan budaya</a></li>
+                </div>
+                <div class="about-us">
+                    <h4>help</h4>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">maps</a></li>
+                </div>
+                <div class="about-us">
+                    <h4>Resources</h4>
+                    <li><a href="#">blog</a></li>
+                    <li><a href="#">galeri</li>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <div>
+                    &copy; 2024 - FC UTM
+                </div>
+                <div>
+                    <a href="#">term & conditions</a>
+                    <a href="#">privacy policy</a>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- footer end -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+</html>
